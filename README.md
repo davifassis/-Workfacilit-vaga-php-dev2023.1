@@ -2,7 +2,7 @@
 
 Passo 1: Criação do ambiente de testes após a leitura de todas as situações apresentadas criei uma base de testes utilizando as ferramentas XAMPP e HeidiSQL 
 
-![alt text](2.png)
+![image1](2.png)
 
 Situação 1: Excluindo as possibilidades de contato com banco e a intermediadora poderíamos entrar em contato com o cliente e solicitar que ele fizesse o pagamento previsto em contrato novamente, tendo em vista o reembolso assim que o primeiro pagamento fosse constatado. Caso não houvesse possibilidade ainda poderíamos consultar nas plataformas online para checar se ha instabilidade nas redes do banco ou da intermediadora oque tornaria a informação mais confiável, mas acredito que o mais correto a se fazer seria dar prosseguimento ao atendimento.
 
@@ -31,7 +31,9 @@ crmerp_legacy_company_2:
 
 Em uma situação real consultas também poderiam ser realizadas nos LOGs para realoca-los caso existissem(dependendo de como a Workfacilit trata os LOGs).
 
-Situação 4: Filtros de Tabela principal, Usuário, IP, Ação, Data, os JSONs tambem poderiam ser tratados em tela para não sobrecarregar o banco com grandes consultas e novos filtros seriam gerados. (Esboço: 1.png)
+Situação 4: Filtros de Tabela principal, Usuário, IP, Ação, Data, os JSONs tambem poderiam ser tratados em tela para não sobrecarregar o banco com grandes consultas e novos filtros seriam gerados.
+
+![image2](1.png)
 
 	SELECT main_table, username, action, json_changed, ip, user_agent, datecreate FROM logs WHERE main_table = "projeto_planos" AND user_id = 1 AND ip = "172.18.0.1" AND action = "update" AND datecreate BETWEEN '2022-12-20 21:33:00' AND '2022-12-28 10:46:00';
 
