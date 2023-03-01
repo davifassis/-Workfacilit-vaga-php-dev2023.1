@@ -36,7 +36,9 @@ Situação 4: Filtros de Tabela principal, Usuário, IP, Ação, Data, os JSONs 
 Situação 5: Ao realizar a análise não encontrei melhorias consideráveis, ao primeiro olhar parece completo e seguro, alguns trechos de código poderiam ser simplificados ao atribuir valores de objetos a Arrays e uma implementação de chaves de criptografia por sessão poderia ser interessante.
 
 Situação 6: Iria verificar na base de dados se existe correlação entre a tabela de lead e vendedor responsável e se os vendedores já possuem números cadastrados.
+
 Caso sim: Será necessário implementar uma API de envio de SMS no sistema que receberá uma chamada sempre que um novo lead for cadastrado (Normalmente será necessário o contrato de uma empresa terceira que ficará responsável pelo pacote de SMS ex: 1000SMS´s custarão R$100,00) uma solução alternativa para redução de custos seria uma API ou um Script de envio de mensagens por WhatsApp caso os vendedores já possuam plano de dados móvel.
+
 Caso nao: Será necessário adicionar o campo de número ao cadastro de cliente, e o campo de vendedor ao cadastro de lead antes de realizar os passos anteriores.
 
 Bônus: Na tabela users_portaldocliente os projetos "1-1" não tem um projeto_id associados já as "1-n" sim.
