@@ -29,7 +29,7 @@ crmerp_legacy_company_2:
 
 Em uma situação real consultas também poderiam ser realizadas nos LOGs para realoca-los caso existissem(dependendo de como a Workfacilit trata os LOGs).
 
-Situação 4: Filtros de Tabela principal, Usuário, IP, Ação, Data, os JSONs tambem poderiam ser tratados em tela para não sobrecarregar o banco com grandes consultas e novos filtros seriam gerados. (Esboço: imagem 1)
+Situação 4: Filtros de Tabela principal, Usuário, IP, Ação, Data, os JSONs tambem poderiam ser tratados em tela para não sobrecarregar o banco com grandes consultas e novos filtros seriam gerados. (Esboço: 1.png)
 
 	SELECT main_table, username, action, json_changed, ip, user_agent, datecreate FROM logs WHERE main_table = "projeto_planos" AND user_id = 1 AND ip = "172.18.0.1" AND action = "update" AND datecreate BETWEEN '2022-12-20 21:33:00' AND '2022-12-28 10:46:00';
 
