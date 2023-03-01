@@ -2,7 +2,7 @@
 
 Passo 1: Criação do ambiente de testes após a leitura de todas as situações apresentadas criei uma base de testes utilizando as ferramentas XAMPP e HeidiSQL 
 
-(https://github.com/davifassis/-Workfacilit-vaga-php-dev2023.1/blob/main/2.png)
+<https://github.com/davifassis/-Workfacilit-vaga-php-dev2023.1/blob/main/2.png>
 
 Situação 1: Excluindo as possibilidades de contato com banco e a intermediadora poderíamos entrar em contato com o cliente e solicitar que ele fizesse o pagamento previsto em contrato novamente, tendo em vista o reembolso assim que o primeiro pagamento fosse constatado. Caso não houvesse possibilidade ainda poderíamos consultar nas plataformas online para checar se ha instabilidade nas redes do banco ou da intermediadora oque tornaria a informação mais confiável, mas acredito que o mais correto a se fazer seria dar prosseguimento ao atendimento.
 
