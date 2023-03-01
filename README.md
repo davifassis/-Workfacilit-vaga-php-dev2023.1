@@ -1,17 +1,12 @@
 # -Workfacilit-vaga-php-dev2023.1
 
-	Passo 1: Criação do ambiente de testes Após a leitura de todas as situações apresentadas criei uma base de testes utilizando as ferramentas XAMPP
-e HeidiSQL.
+	Passo 1: Criação do ambiente de testes Após a leitura de todas as situações apresentadas criei uma base de testes utilizando as ferramentas XAMPP e HeidiSQL.
 
 	Situação 1: Excluindo as possibilidades de contato com banco e a intermediadora poderíamos entrar em contato com o cliente e solicitar que ele fizesse o pagamento previsto em contrato novamente, tendo em vista o reembolso assim que o primeiro pagamento fosse constatado. Caso não houvesse possibilidade ainda poderíamos consultar nas plataformas online para checar se ha instabilidade nas redes do banco ou da intermediadora oque tornaria a informação mais confiável, mas acredito que o mais correto a se fazer seria dar prosseguimento ao atendimento.
 
-	Situação 2: Analisando a função encontrada no arquivo SendGridEmail.php linha 19 notei que é necessário que a consulta não reproduza resultados para que a função retorne nulo e passe nas demais validações (linhas 42,58,109). Portanto, a formanda raphaella9@gmail.com não está recebendo os e-mails porque existe um registro no banco:
-crmerp_legacy_base> history_emails_blacklist> id 272
+	Situação 2: Analisando a função encontrada no arquivo SendGridEmail.php linha 19 notei que é necessário que a consulta não reproduza resultados para que a função retorne nulo e passe nas demais validações (linhas 42,58,109). Portanto, a formanda raphaella9@gmail.com não está recebendo os e-mails porque existe um registro no banco: crmerp_legacy_base> history_emails_blacklist> id 272
 
-    	Situação 3: Ao analisar os bancos notei que a associação era feita pelas seguintes tabelas e colunas
-crmerp_legacy_base> users_portaldocliente> database
-crmerp_legacy_company_1> clientes
-crmerp_legacy_company_2> clientes
+    	Situação 3: Ao analisar os bancos notei que a associação era feita pelas seguintes tabelas e colunas crmerp_legacy_base> users_portaldocliente> database crmerp_legacy_company_1> clientes crmerp_legacy_company_2> clientes
 
 Portanto o erro poderia ser facilmente corrigido realizando um backup dos atuais dados da cliente e executando as respectivas consultas:
 
