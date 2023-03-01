@@ -1,6 +1,6 @@
 # -Workfacilit-vaga-php-dev2023.1
 
-	Passo 1: Criação do ambiente de testes Após a leitura de todas as situações apresentadas criei uma base de testes utilizando as ferramentas XAMPP e HeidiSQL.
+Passo 1: Criação do ambiente de testes Após a leitura de todas as situações apresentadas criei uma base de testes utilizando as ferramentas XAMPP e HeidiSQL.
 
 Situação 1: Excluindo as possibilidades de contato com banco e a intermediadora poderíamos entrar em contato com o cliente e solicitar que ele fizesse o pagamento previsto em contrato novamente, tendo em vista o reembolso assim que o primeiro pagamento fosse constatado. Caso não houvesse possibilidade ainda poderíamos consultar nas plataformas online para checar se ha instabilidade nas redes do banco ou da intermediadora oque tornaria a informação mais confiável, mas acredito que o mais correto a se fazer seria dar prosseguimento ao atendimento.
 
@@ -16,13 +16,16 @@ Situação 3: Ao analisar os bancos notei que a associação era feita pelas seg
 Portanto o erro poderia ser facilmente corrigido realizando um backup dos atuais dados da cliente e executando as respectivas consultas:
 
 crmerp_legacy_base:
-	UPDATE `crmerp_legacy_base`.`users_portaldocliente` SET `database`='crmerp_legacy_company_2', `empresa_id`=699 WHERE  `id`=1 AND `username`='carla.meres@legacy.com.br';
+	
+	UPDATE `crmerp_legacy_base`.`users_portaldocliente` SET `database`='crmerp_legacy_company_2', `empresa_id`=699 WHERE  `id`=1 AND 				`username`='carla.meres@legacy.com.br';
     
 crmerp_legacy_company_1:
+	
 	DELETE FROM `crmerp_legacy_company_1`.`clientes` WHERE  `id`=3 AND `nid`='3';
     
 crmerp_legacy_company_2:
-    	INSERT INTO `clientes` VALUES (3, '3', 1, 'Carla Méres', NULL, NULL, NULL, '1988-09-19', NULL, 'PE', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'carla.meres@legacy.com.br', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 30, NULL, NULL, NULL, NULL, NULL, NULL, 68, 1, '2019-12-13 19:51:20', '1', NULL, NULL, NULL, NULL, '2019-12-13 19:47:34', '2022-01-18 14:19:06');
+    	
+	INSERT INTO `clientes` VALUES (3, '3', 1, 'Carla Méres', NULL, NULL, NULL, '1988-09-19', NULL, 'PE', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'carla.meres@legacy.com.br', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 30, NULL, NULL, NULL, NULL, NULL, NULL, 68, 1, '2019-12-13 19:51:20', '1', NULL, NULL, NULL, NULL, '2019-12-13 19:47:34', '2022-01-18 14:19:06');
 
 Em uma situação real consultas também poderiam ser realizadas nos LOGs para realoca-los caso existissem(dependendo de como a Workfacilit trata os LOGs).
 
